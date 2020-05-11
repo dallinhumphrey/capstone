@@ -203,6 +203,13 @@
                 {%- if section.settings.enable_payment_button %} product-form__item--payment-button {%- endif -%}
                 {%- if product.has_only_default_variant %} product-form__item--no-variants {%- endif -%}"
               >
+
+            <div class="grid__item medium-up--one-half cart-note">
+              <label for="CartSpecialInstructions" class="cart-note__label small--text-center"><h4>For each custom bottle please include the following information:</h4><p2>bottle color and size:<br>engraved name:<br>image id:</p2><br></label>
+              <textarea name="note" id="CartSpecialInstructions" class="cart-note__input" data-cart-notes>{{ cart.note }}</textarea>
+              <h1></h1>
+            </div>
+
                 <button type="submit" name="add"
                   {% unless current_variant.available %} aria-disabled="true"{% endunless %}
                   aria-label="{% unless current_variant.available %}{{ 'products.product.sold_out' | t }}{% else %}{{ 'products.product.add_to_cart' | t }}{% endunless %}"
@@ -219,9 +226,9 @@
                     {% include 'icon-spinner' %}
                   </span>
                 </button>
-                {% if section.settings.enable_payment_button %}
+
                 {{ form | payment_button }}
-                {% endif %}
+              
                       <div>
                         <img class="secure_checkout" src=https://cdn.shopify.com/s/files/1/2263/8465/files/trust_badge_2.png?13704073961042733707/>
                       </div> 
