@@ -41,6 +41,9 @@
         }
       </style>
 
+      
+
+
             {% if section.settings.message_link == blank %}
                 <div class="announcement-bar">
                 {% else %}
@@ -102,7 +105,8 @@
 
             {% if section.settings.align_logo == 'left' %}
                 <nav class="grid__item medium-up--one-half small--hide" id="AccessibleNav" role="navigation">
-                    {% include 'site-nav', linklist: section.settings.main_linklist %}
+                    {% include 'site-nav', linklist: section.settings.main_linklist, <a href="https://valknut-dsh.myshopify.com/pages/about-us">Image selection</a> %}
+                    
                 </nav>
             {% endif %}
 
