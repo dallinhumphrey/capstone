@@ -1,6 +1,6 @@
 const Index = () => (
   <div>
-    <p>Say what I want</p>
+    <p>I go through the shopify api and print on local host 3000</p>
   </div>
 );
 
